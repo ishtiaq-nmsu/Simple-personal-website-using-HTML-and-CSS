@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+
+<html data-theme="light">
+
+<head>
+    <meta name = "viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile: Ishtiaq</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+
+ <!-- Top section of the page    -->
+<section class = "header">   
+    <nav>  
+       <!-- Navigation Menu -->
+       <div class="nav-links">
+         
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="project.html">Project</a></li>
+                <li><a href="hobby.html">Hobby</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+
+        </div>
+    </nav>
+
+    <div class = "text-box">
+        <h1>Ishtiaq Ahmed</h1>
+        <p>New Mexico State University </p>
+    </div>   
+
+    <!-- Slider implementation to toggle to dark mode -->
+    <div class="theme-switch-wrapper">     
+        <label class="theme-switch" for="checkbox">
+            <input type="checkbox" id="checkbox" />
+            <div class="slider round"></div>
+        </label>
+        <em>Enable Dark Mode</em>
+    </div>
+</section>
+
+<!-- Main body content  -->
+
+    <div class="profile" style="color: var(--contact); background-color: var(--primary-color);">
+        <br>
+        <h2 style="padding-left: 2%;">Education</h2> <hr>
+      
+            <h4 style="padding-left: 2%;"> New Mexico State University, Las Cruces, NM, USA </h4>
+            <p style="padding-left: 2%;">Master’s of Science in Computer Science, expected graduation December 2024</p> <br><br>
+            <h4 style="padding-left: 2%;">Rajshahi University of Engineering & Technology, Rajshahi, Bangladesh </h4>
+            <p style="padding-left: 2%;">Bachelor of Science in Electronics & Telecommunication Engineering, July 2011</p>
+        
+        <br><br>
+        <h2 style="padding-left: 2%;">Professional Experience</h2> <hr>
+
+
+        <h4 style="padding-left: 2%;"> Graduate Assistant, Undergraduat Admission and Orientation </h4>
+        <p style="padding-left: 2%;">New Mexico State University</p> <br><br>
+        <h4 style="padding-left: 2%;">AI Innovation Manager, Analytics Center of Excellence </h4>
+        <p style="padding-left: 2%;">Robi Axiata Limited, Bangladesh</p><br><br>
+        <h4 style="padding-left: 2%;">Radio Network Design & Optimization Engineer, Technology </h4>
+        <p style="padding-left: 2%;">Robi Axiata Limited, Bangladesh</p><br><br>
+        <h4 style="padding-left: 2%;">System Engineer, Service Operation Center, technology </h4>
+        <p style="padding-left: 2%;">Grameenphone Limited, Bangladesh</p>
+        
+
+        <figure style="margin: 10%;"> 
+            <img src="images/robi.jpg" alt="Ishtiaq" width="100%" height="auto">
+            <figcaption style="text-align: center;">Recieving Data Analyst Certificate from CEO of Robi Axiata Bangladesh</figcaption>
+        </figure>
+
+    </div>
+
+
+<!-- Footer  -->
+<footer>
+    <p> Designed and Developed by Ishtiaq Ahmed <br>
+        © Ishtiaq Ahmed <br>
+    <a href="mailto:ishtiaq@nmsu.edu" style="color: burlywood;">ishtiaq@nmsu.edu</a></p>
+</footer>
+
+
+</body>
+
+<!-- Dark Theme Implementation  -->
+<!-- Help taken from https://dev.to/ananyaneogi/create-a-dark-light-mode-switch-with-css-variables-34l8 -->
+
+<script>
+ 
+    const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
+    toggleSwitch.addEventListener('change', switchTheme, false);
+    function switchTheme(e) {
+    if (e.target.checked) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+    }
+    else {
+        document.documentElement.setAttribute('data-theme', 'light');
+    }    
+    }
+
+</script>   
+
+</html>
