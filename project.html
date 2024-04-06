@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+
+<html data-theme="light">
+
+<head>
+    <meta name = "viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project: Ishtiaq</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+
+ <!-- Top section of the page    -->
+<section class = "header">   
+    <nav>  
+       <!-- Navigation Menu -->
+       <div class="nav-links">
+         
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="project.html">Project</a></li>
+                <li><a href="hobby.html">Hobby</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+
+        </div>
+    </nav>
+
+    <div class = "text-box">
+        <h1>Ishtiaq Ahmed</h1>
+        <p>New Mexico State University </p>
+    </div>   
+
+    <!-- Slider implementation to toggle to dark mode -->
+    <div class="theme-switch-wrapper">     
+        <label class="theme-switch" for="checkbox">
+            <input type="checkbox" id="checkbox" />
+            <div class="slider round"></div>
+        </label>
+        <em>Enable Dark Mode</em>
+    </div>
+</section>
+
+<!-- Main body panel  -->
+
+    <div class="profile" style="color: var(--contact); background-color: var(--primary-color); ">
+        <br>
+        <h2 style="padding-left: 2%;padding-top: 2%; color: #8c0b42;font-size: xx-large;border-left: 2px solid">higherstudyprep.com</h2> <hr> <br>
+        <img src="images/hsp.png " alt="Ishtiaq" width="100%" height="auto" style="border:solid"><br>
+        
+        <h4 style="padding-left: 2%;padding-top: 2%;font-size: x-large;"> Co-founder & content creator of higherstudyprep.com, an online educational platform </h4>
+        <p style="padding-left: 2%;padding-top: 3%;"> <a href="https://www.higherstudyprep.com">Higher Study Prep</a>
+        is a website to help students to make the journey easier and help them in every aspect 
+        of higher study. This website provides guidlines and tools for better preparation for
+        standardized test. Students from different countries very often face problems to find a proper guidline to start
+        their higher study journey. Our intention is to help those students. Many of the websites services are completely free
+        for the students</p> 
+    
+        <br><br>
+        <h2 style="padding-left: 2%;color:#8c0b42; font-size: xx-large; border-left: 2px solid"> reviewbangla.com</h2> <hr><br>
+        <img src="images/review.png" alt="Ishtiaq" width="100%" height="auto"style="border:solid"><br>
+        
+        <h4 style="padding-left: 2%;padding-top: 2%;font-size: x-large;"> Co-founded reviewbangla.com, a review collecting, monitoring and analyzing platform </h4>
+        <p style="padding-left: 2%;padding-top: 3%;"> <a href="https://www.reviewbangla.com">Review Bangla</a>
+        is a business review platform where people can post review in Bengali language. In USA people can use website like 
+        yelp.com to get an idea about diferent type of entities. However, in Bangladesh there is no such kind of website is 
+        available. Our idea was to build a bias free review platform so that the commuinity can be benifited. The unique selling point of this idea is
+        people can post review in Bangla. 
+        </p> <br>
+
+    </div>
+
+
+<!-- Footer  -->
+<footer>
+    <p> Designed and Developed by Ishtiaq Ahmed <br>
+        © Ishtiaq Ahmed <br>
+    <a href="mailto:ishtiaq@nmsu.edu" style="color: burlywood;">ishtiaq@nmsu.edu</a></p>
+</footer>
+
+
+</body>
+
+<!-- Dark Theme Implementation  -->
+<!-- Help taken from https://dev.to/ananyaneogi/create-a-dark-light-mode-switch-with-css-variables-34l8 -->
+
+<script>
+ 
+    const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
+    toggleSwitch.addEventListener('change', switchTheme, false);
+    function switchTheme(e) {
+    if (e.target.checked) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+    }
+    else {
+        document.documentElement.setAttribute('data-theme', 'light');
+    }    
+    }
+
+</script>   
+
+</html>
