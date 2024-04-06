@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+
+<html data-theme="light">
+
+<head>
+    <meta name = "viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hobby: Ishtiaq</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+
+ <!-- Top section of the page    -->
+<section class = "header">   
+    <nav>  
+       <!-- Navigation Menu -->
+       <div class="nav-links">
+         
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="project.html">Project</a></li>
+                <li><a href="hobby.html">Hobby</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+
+        </div>
+    </nav>
+
+    <div class = "text-box">
+        <h1>Ishtiaq Ahmed</h1>
+        <p>New Mexico State University </p>
+    </div>   
+
+    <!-- Slider implementation to toggle to dark mode -->
+    <div class="theme-switch-wrapper">     
+        <label class="theme-switch" for="checkbox">
+            <input type="checkbox" id="checkbox" />
+            <div class="slider round"></div>
+        </label>
+        <em>Enable Dark Mode</em>
+    </div>
+</section>
+
+<!-- Main body content  -->
+<div class="main_body">
+       
+    <div class="row_block"> 
+        <h1 style="color: floralwhite;padding-left: 2%;line-height: 2;">My Hobby </h1>
+        <p style="color: whitesmoke; padding-left: 2%; padding-bottom: 2%;">  
+            I love travelling, biking, watching movies, reading books and spend time 
+            with friends and families.
+        </p>
+    </div>
+
+    
+    <div class = body_container>       
+        <!-- <div class = "item one"> <img src="images/6.jpg" alt="Ishtiaq" width="100%" height="auto"></div> -->
+        <iframe  class = "item one" width="560" height="315" src="https://www.youtube.com/embed/r0cXB6AarSw" title="YouTube video player" frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <div class = item> 
+            <h1 style="color: floralwhite;padding-left: 2%;line-height: 2;">Travelling </h1>
+            <p style="color: whitesmoke; padding-left: 2%; padding-bottom: 2%;">  
+                I love to travel around with friends and family! I have visited most of the attractions of Bangladesh.
+                I also travelled to India, Bhuta, Singapore and China and now I am visiting USA for study. I would like
+                to travel around USA as well whenever I can mange time.
+            </p>
+        </div>
+    </div>
+
+    <div class = body_container>       
+        <div class = item> 
+            <h1 style="color: floralwhite;padding-left: 2%;line-height: 2;">Biking</h1>
+            <p style="color: whitesmoke; padding-left: 2%; padding-bottom: 2%;">  
+                I used to commute in my bike around Dhaka city. Often I try to go on 
+                a long ride with biking commuinity.
+                <br><br>
+                The picture was taken during covid time when I used to go to office on my bike.
+            </p>
+        </div>
+        <div class = "item one"> <img src="images/biking.jpg" alt="Ishtiaq" width="100%" height="auto"></div>
+    </div>
+
+    <div class = body_container>       
+        <figure class = "item one"> 
+            <img src="images/brotherhood.jpg" alt="Ishtiaq" width="100%" height="auto">
+            <figcaption>Image copyright: imdb.com/title/tt1355642/</figcaption>
+        </figure>
+        <div class = item> 
+            <h1 style="color: floralwhite;padding-left: 2%;line-height: 2;"> Movies/TV Series </h1>
+            <p style="color: whitesmoke; padding-left: 2%;padding-bottom: 2%;">  
+                My another favorite past time is watching movies and binge watch tv series. My favorite genre
+                is thriller, sci-fi and fantasy literature.
+                <br> <br>
+                I also watch anime. My favorite characters are Edward Elrich from Fulmetal Alchemist
+                and Obito Uchiha from Naruto. 
+            </p>
+        </div>
+    </div>
+</div>
+<!-- Footer  -->
+<footer>
+    <p> Designed and Developed by Ishtiaq Ahmed <br>
+        © Ishtiaq Ahmed <br>
+    <a href="mailto:ishtiaq@nmsu.edu" style="color: burlywood;">ishtiaq@nmsu.edu</a></p>
+</footer>
+
+
+</body>
+
+<!-- Dark Theme Implementation  -->
+<!-- Help taken from https://dev.to/ananyaneogi/create-a-dark-light-mode-switch-with-css-variables-34l8 -->
+
+<script>
+ 
+    const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
+    toggleSwitch.addEventListener('change', switchTheme, false);
+    function switchTheme(e) {
+    if (e.target.checked) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+    }
+    else {
+        document.documentElement.setAttribute('data-theme', 'light');
+    }    
+    }
+
+</script>   
+
+</html>
