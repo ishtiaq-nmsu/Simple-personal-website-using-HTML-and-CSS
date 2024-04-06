@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+
+<html data-theme="light">
+
+<head>
+    <meta name = "viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home: Ishtiaq</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+
+ <!-- Top section of the page    -->
+<section class = "header">   
+    <nav>  
+       <!-- Navigation Menu -->
+       <div class="nav-links">
+         
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="project.html">Project</a></li>
+                <li><a href="hobby.html">Hobby</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+
+        </div>
+    </nav>
+
+    <div class = "text-box">
+        <h1>Ishtiaq Ahmed</h1>
+        <p>New Mexico State University </p>
+    </div>   
+
+    <!-- Slider implementation to toggle to dark mode -->
+    <div class="theme-switch-wrapper">     
+        <label class="theme-switch" for="checkbox">
+            <input type="checkbox" id="checkbox" />
+            <div class="slider round"></div>
+        </label>
+        <em>Enable Dark Mode</em>
+    </div>
+</section>
+
+<!-- Main body panel  -->
+<div class = body_container>
+    <div class = "item one"> <img src="images/6.jpg" alt="Ishtiaq" width="100%" height="auto"></div>
+    <div class = item> 
+        <h1 style="color: floralwhite;padding-left: 2%;line-height: 2;">About Me </h1>
+        <p style="color: whitesmoke; padding-left: 2%;">
+            Hello! I am Ishtiaq and I am a Computer Science graduate
+            student at New Mexico State University.I joined NMSU fall 22. 
+            I came from a small south Asian country named Bangladesh which is 
+            roughly 8000-9000 miles away from New Mexico.  
+            <br><br>
+            I completed my Bachelor in Electronics and Telecommunication Engineering
+            from Rajshahi University of Engineering & Technology.
+            I worked as a telecommunication engineer for 8 years and as a telecxom data 
+            analyst for 2 years and now I am persuing a higher degree in computer Science.
+            <br><br>
+            I love travelling, biking, watching movies and spend time with friends and families.
+            I have visited 5 countries including USA.    
+        </p>
+
+    </div>
+
+
+</div>
+
+<!-- Footer  -->
+<footer>
+    <p> Designed and Developed by Ishtiaq Ahmed <br>
+        © Ishtiaq Ahmed <br>
+    <a href="mailto:ishtiaq@nmsu.edu" style="color: burlywood;">ishtiaq@nmsu.edu</a></p>
+</footer>
+
+
+</body>
+
+<!-- JS code for Dark Theme Implementation  -->
+<!-- Help taken from https://dev.to/ananyaneogi/create-a-dark-light-mode-switch-with-css-variables-34l8 -->
+
+<script>
+ 
+    const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
+    toggleSwitch.addEventListener('change', switchTheme, false);
+    function switchTheme(e) {
+    if (e.target.checked) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+    }
+    else {
+        document.documentElement.setAttribute('data-theme', 'light');
+    }    
+    }
+
+</script>   
+
+</html>
