@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+
+<html data-theme="light">
+
+<head>
+    <meta name = "viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact: Ishtiaq</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+
+ <!-- Top section of the page    -->
+<section class = "header">   
+    <nav>  
+       <!-- Navigation Menu -->
+       <div class="nav-links">
+         
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="project.html">Project</a></li>
+                <li><a href="hobby.html">Hobby</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+
+        </div>
+    </nav>
+
+    <div class = "text-box">
+        <h1>Ishtiaq Ahmed</h1>
+        <p>New Mexico State University </p>
+        <br>
+        
+    </div>   
+
+    <!-- Slider implementation to toggle to dark mode -->
+    <div class="theme-switch-wrapper">     
+        <label class="theme-switch" for="checkbox">
+            <input type="checkbox" id="checkbox" />
+            <div class="slider round"></div>
+        </label>
+        <em>Enable Dark Mode</em>
+    </div>
+</section>
+
+<!-- Main body content  -->
+<div>
+<h1 style="font-size: xx-large; color: var(--contact); background-color: var(--primary-color); padding-top: 3%;padding-bottom: 2%;">Contact Me</h1>
+</div>
+<div class = body_container>       
+    <div class = c_item> 
+        <img src="images/home.png" alt="Ishtiaq" width="30%" height="auto" >
+        <h1 style="color: var(--contact);padding-left: 2%;line-height: 2;">Address</h1>
+        <p style="color: var(--contact); padding-left: 2%; padding-bottom: 2%;">  
+           1000 Test Dr
+            <br> Las Cruces, NM
+           
+        </p>
+    </div>
+    <div class = c_item> 
+        <img src="images/phone.png" alt="Ishtiaq" width="30%" height="auto" >
+        <h1 style="color: var(--contact);padding-left: 2%;line-height: 2;">Phone</h1>
+        <p style="color: var(--contact); padding-left: 2%; padding-bottom: 2%;">  
+          (555) 555-5555
+        </p>
+    </div>
+
+    <div class = c_item> 
+        <img src="images/email.png" alt="Ishtiaq" width="25%" height="auto" >
+        <h1 style="color: var(--contact);padding-left: 2%;line-height: 2;">Email</h1>
+        <p style="color: var(--contact); padding-left: 2%; padding-bottom: 2%;">  
+            ishtiaq@nmsu.edu
+        </p>
+    </div>
+</div>
+<!-- Footer  -->
+<footer>
+    <p> Designed and Developed by Ishtiaq Ahmed <br>
+        © Ishtiaq Ahmed <br>
+    <a href="mailto:ishtiaq@nmsu.edu" style="color: burlywood;">ishtiaq@nmsu.edu</a></p>
+</footer>
+
+
+</body>
+
+<!-- Dark Theme Implementation  -->
+<!-- Help taken from https://dev.to/ananyaneogi/create-a-dark-light-mode-switch-with-css-variables-34l8 -->
+
+<script>
+ 
+    const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
+    toggleSwitch.addEventListener('change', switchTheme, false);
+    function switchTheme(e) {
+    if (e.target.checked) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+    }
+    else {
+        document.documentElement.setAttribute('data-theme', 'light');
+    }    
+    }
+
+</script>   
+
+</html>
