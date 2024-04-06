@@ -1,0 +1,330 @@
+*{
+    margin: 0 auto;
+    padding: 0;
+    /* max-width is fixed for having good viewing experience in large screen */
+    max-width: 1024px; 
+
+}
+
+/* Style code for cover and navigation  */
+.header{
+    min-height: 50vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(images/header.JPG) ;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+nav{
+   display: flex;
+   /* padding: 2% 6%; */
+   justify-content: space-between; 
+   align-items: center;
+   /* background-color: rgba(58, 91, 240, 0.671); */
+
+
+}
+
+.nav-links{
+    /* background-color: rgba(58, 91, 240, 0.671);  */
+    background-color: var(--secondary-color); 
+    flex: 1;
+    text-align: right;
+    
+
+}
+
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 10px 10px;
+    position: relative;
+}
+
+.nav-links ul li a{
+    color: beige;
+    text-decoration: none;
+    font-size: 20px;
+
+}
+
+/* Styling to show red underline for navigation menu */
+.nav-links ul li ::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #f44336;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.nav-links ul li a:hover::after{
+    width: 100%;
+}
+
+.text-box{
+    width: auto;
+    color: honeydew;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    font-size: xx-large;
+    transform: translate(-50%,-50%);
+}
+
+/* style code for main body panel */
+
+/* flex-container */
+.body_container{
+    background: var(--primary-color);
+    border: solid #222222;
+    /* min-height: 50vh; */
+    /* margin: 10px; */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    /* align-items: stretch; */
+    justify-content: flex-start;
+}
+
+/* flex-item */
+.item{
+    background: var(--crimson);
+    margin: 0.5em;
+    flex-grow: 1;
+    max-width: 50%;
+    max-height: auto;
+    /* align-self: center; */
+
+}
+
+/* flex-item for contact page */
+.c_item{
+    background: var(--primary-color);
+    margin: 0.5em;
+    flex-grow: 1;
+    min-width: 30%;
+    max-height: auto;
+    /* padding: 2%; */
+    /* justify-content: center; */
+    align-self: center;
+    text-align: center;
+
+}
+
+/* image class one styling */
+.one{
+    align-self: center;
+    background: none
+}
+
+.row_block{
+    background: var(--crimson);
+    margin: 0.5em;
+}
+
+
+.icon{
+    width: 40%;
+    height: auto;
+}
+
+/* Style for footer: same for all page */
+footer{
+    /* position: fixed; */
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 3px;
+    background-color: var(--secondary-color);
+    color: white;   
+}
+
+
+/* Below code is to make the website responsive */
+/* once the screen size reduce like in mobile then css style will be changed */
+@media screen and (max-width: 600px) {
+    
+    .nav-links{
+        /* background-color: rgba(58, 91, 240, 0.671);  */
+        background-color: var(--secondary-color);
+        flex: 1;
+        text-align: right;
+    }
+    
+    .nav-links ul li{
+        list-style: none;
+        display: inline-block;
+        padding: 5px 5px;
+        position: relative;
+
+        
+    }
+    
+    .nav-links ul li a{
+        color: beige;
+        text-decoration: none;
+        font-size: 15px;
+    }
+
+    .header{
+        min-height: 20vh;
+        width: 100%;
+        background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(images/header.JPG) ;
+        background-position: center;
+        background-size: cover;
+        position: relative;
+    }
+
+    .text-box h1{
+        font-size: large;
+    } 
+    
+    .text-box p{
+        font-size: medium;
+    } 
+    .body_container{
+        background: var(--primary-color);
+        
+        /* min-height: 50vh; */
+        /* margin: 10px; */
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        /* align-items: stretch; */
+        justify-content: space-around;
+    }
+
+    .item{
+        background: var(--crimson);
+        margin: 0.5em;
+        flex-grow: 1;
+        /* max-width: 50%; */
+        min-width: 90%;
+        /* max-height: auto; */
+        align-self: center;
+    
+    }
+
+    .c_item{
+        background: var(--primary-color);
+        margin: 0.5em;
+        flex-grow: 1;
+        /* max-width: 50%; */
+        min-width: 90%;
+        /* max-height: auto; */
+        align-self: center;
+        text-align: center;
+ 
+    
+    }
+
+  
+    footer{
+        /* position: fixed; */
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+        padding: 3px;
+        background-color: var(--secondary-color);
+        color: white;   
+    }
+  }
+
+
+  /*Simple css to style it like a toggle switch*/
+  /* Help taken from https://dev.to/ananyaneogi/create-a-dark-light-mode-switch-with-css-variables-34l8 */
+
+  
+  /* light mode styling parameters */
+  :root {
+    --primary-color: white;
+    --secondary-color: rgba(58, 91, 240, 0.904);
+    --font-color: white;
+    --bg-color: rgb(255, 255, 255);
+    --crimson: #8c0b42;
+    --contact: #222222;
+
+}
+
+/* dark mode styling parameters */
+[data-theme="dark"] {
+    --primary-color: #222222;
+    --secondary-color: #161625;
+    --font-color: #e1e1ff;
+    --bg-color: #c6c6ca;
+    --crimson: #242424;
+    --contact: #e1e1ff;
+}
+
+/* slider styling */
+  .theme-switch-wrapper {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    bottom: 0.5pc;
+    left: 0.5pc;
+}
+  
+    em {
+        margin-left: 10px;
+        font-size: medium;
+        color: beige;
+    }
+  
+  .theme-switch {
+    display: inline-block;
+    height: 20px;
+    position: relative;
+    width: 40px;
+  }
+  
+  .theme-switch input {
+    display:none;
+  }
+  
+  .slider {
+    background-color: #ccc;
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    background-color: #fff;
+    /* bottom: 4px; */
+    content: "";
+    height: 20px;
+    /* left: 4px; */
+    position: absolute;
+    transition: .4s;
+    width: 20px;
+  }
+  
+  input:checked + .slider {
+    background-color: #e0c632;
+  }
+  
+  input:checked + .slider:before {
+    transform: translateX(20px);
+  }
+  
+  .slider.round {
+    border-radius: 10px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+  
+  .profile h4{
+    border-left: 2px solid;
+    
+  }
